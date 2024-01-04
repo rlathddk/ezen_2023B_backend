@@ -14,7 +14,7 @@ public class Step1 { // 클래스 선언  // class start
             // - 실행[선언/정의 말고]은 무조건 main 안에서 시작한다.
             // main()안에 main 스레드[코드를 읽는 흐름] 포함
         System.out.println(); // <---> console.log
-        // 콘솔에 출력하는 코드 [JS : console.log]
+        // 콘솔에 출력하는 코 드 [JS : console.log]
 
         // 한줄 주석
         /* 여러줄 주석*/
