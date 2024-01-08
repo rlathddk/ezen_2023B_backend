@@ -3,6 +3,8 @@ package day04;
 
 import java.util.Scanner;
 
+
+
 // p.131 무한루프 활용
 public class Step3 {
     public static void main(String[] args) {
@@ -30,7 +32,7 @@ public class Step3 {
             } else if (strNum.equals("3")) { // 만약에 입력받은 값이 3이면
                 // 1. while 다시 이동해서 false 이므로 반복문 종료
                 run = false;
-                // 2. 가장 가꾸운 반복문{}나가기 -> 38번줄 이동
+                // 2. 가장 가까운 반복문{}나가기 -> 38번줄 이동
 //                break; // 가장 가까운 반복문 탈출 키워드 /
 //                // 3. 함수{}나가기 -> 40번줄 이동
 //                return; // 현재 함수 종료 // 함수밖으로 나감
