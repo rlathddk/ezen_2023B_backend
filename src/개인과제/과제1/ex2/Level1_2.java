@@ -1,4 +1,4 @@
-package 과제.과제2.Level1.ex2;
+package 개인과제.과제1.ex2;
 
 import java.time.LocalDateTime;
 

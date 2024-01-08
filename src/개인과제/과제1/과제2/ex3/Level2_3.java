@@ -1,4 +1,4 @@
-package 과제.과제1.과제2.ex3;
+package 개인과제.과제1.과제2.ex3;
 
 import java.time.LocalDateTime;
 import java.util.Scanner;
@@ -17,7 +17,9 @@ public class Level2_3 {
 		System.out.println("국어\t영어\t수학\t합계\t평균\t3배수\t8배수\t홀짝\t결과");
 		
 		/* 문제풀이 위치 */
-
+		int 합계 = kor + eng + mat;
+		double 평균 = 합계 / 3;
+		System.out.printf("%d\t%d\t%d\t%d\t%.1f\t%b\t%b\t%s\t%s\t",kor,eng,mat,합계,평균,합계%3==0?true:false,합계%7==0?true:false,합계%2==0?"짝수":"홀수",합계>65?"합격":"불합격");
 		/* ----------- */
 	}
 }

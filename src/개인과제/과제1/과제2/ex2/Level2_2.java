@@ -1,4 +1,4 @@
-package 과제.과제1.과제2.ex2;
+package 개인과제.과제1.과제2.ex2;
 
 import java.time.LocalDateTime;
 import java.util.Random;
@@ -16,7 +16,17 @@ public class Level2_2 {
 		int result = Level2_2.dbinsert();
 		
 		/* 문제풀이 위치 */
-
+		System.out.print("숫자 입력 : ");
+		int sa = scanner.nextInt();
+		if(result == 1){
+			System.out.println("회원가입 성공");
+		} else if (result == 2) {
+			System.out.println("사용중인 아이디");
+		} else if (result == 3) {
+			System.out.println("입력안된 정보가 있습니다.");
+		} else {
+			System.out.println("데이터베이스 오류");
+		}
 		/* ----------- */
 		
 	}
