@@ -8,6 +8,7 @@ public class Step1 { // 클래스 : 모든 자바 코드는 클래스 안에서 
         // 3-1 입력객체 생성 [Scanner객체가 필요한 이유 ??/? 입력받을려고]
         Scanner scanner = new Scanner(System.in); // 라이브러리
 
+
         while (true) {
             // 1. 출력
             System.out.println("========== 방문록 ===========");
