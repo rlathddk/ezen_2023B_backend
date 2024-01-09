@@ -46,7 +46,7 @@ public class Step3 {
                 int password = scanner.nextInt();
 
                 // 6-3 배열게 각각 대입하기
-                내용배열[no-1] = content; // 인덱스 1깍기
+                내용배열[no-1] = content; // 인덱스 1깍기                왜?
                 작성자배열[no-1] = writer;
                 비밀번호배열[no-1] = password;
             }
