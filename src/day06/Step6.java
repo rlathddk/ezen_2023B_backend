@@ -34,42 +34,32 @@ public class Step6 {
 
         // 3. 전화번호부 만들기
         String 전화번호부 = "";
-        // 무한루프
-        while (true){
 
-        // 출력
-            System.out.println("=============== 전화번호부 ==============");
-            System.out.printf("순번\t\t 이름 \t\t 전화번호 \t\t");
+        while (true) {
 
             // 입력
-            System.out.print("선택 > ");
+            System.out.println("선택 > 1.등록 2.삭제 3.출력");
             String ch = scanner.nextLine();
 
-            if(ch.equals("1")){ // 작성
-                int no = scanner.nextInt();
-
-                System.out.print("이름을 입력해주세요 : ");
+            if (ch.equals("1")) { // 작성
+                // 전화번호부 입력
+                System.out.print("이름 : ");
                 String name = scanner.nextLine();
-                전화번호부 += name + ",";
-                System.out.print("전화번호를 입력해주세요 : ");
-                String phonNum = scanner.next();
-                전화번호부 += phonNum + ",";
+                System.out.print("전화번호 : ");
+                String num = scanner.nextLine();
+                전화번호부 += name+num  + "/";
+
+                System.out.println("=============== 전화번호부 ==============");
+                System.out.println("순번\t\t 이름 \t\t 전화번호 \t\t");
+                String[] numsp = 전화번호부.split("/");
+                for(int i = 0; i< numsp.length;i++){
+                    System.out.println(i+1+"\t\t" + numsp[i]);
+                }
+
+            } // if e
+            else if (ch.equals("2")) {
 
             }
-            else if (ch.equals("2")){ // 삭제
-                System.out.println("삭제할 번호를 입력하세요 :");
-
-            }
-            else if (ch.equals("3")){
-
-            }
-            else {
-                System.out.println("알수없는 입력입니다.");
-            }
-
-
-        } // w e
-
-
+        }// w e
     } //m e
 } // c e
