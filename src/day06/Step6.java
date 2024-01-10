@@ -40,26 +40,43 @@ public class Step6 {
             // 입력
             System.out.println("선택 > 1.등록 2.삭제 3.출력");
             String ch = scanner.nextLine();
+            int no = 0;
 
-            if (ch.equals("1")) { // 작성
+            if (ch.equals("1")) { // 1.작성
                 // 전화번호부 입력
                 System.out.print("이름 : ");
                 String name = scanner.nextLine();
                 System.out.print("전화번호 : ");
                 String num = scanner.nextLine();
-                전화번호부 += name+num  + "/";
+                String 명단 =name+"\t\t"+num ; // 명단을 ,를 구분
+                전화번호부 += 명단  + "/";
+                // 이름 전화번호 구분(상태구분)필요
 
                 System.out.println("=============== 전화번호부 ==============");
                 System.out.println("순번\t\t 이름 \t\t 전화번호 \t\t");
-                String[] numsp = 전화번호부.split("/");
-                for(int i = 0; i< numsp.length;i++){
-                    System.out.println(i+1+"\t\t" + numsp[i]);
-                }
+                String[] numsp = 전화번호부.split("/"); // 전화번호부의 "/' 회원목록 짜르기
+
+
+
+                for(int i = 0; i< numsp.length;i++){ // 전화번호부의 길이만큼 i번째 반복
+                    // 출력
+                    no ++;
+                    System.out.println(no + "\t\t" + numsp[i]);
+
+                }// f e
 
             } // if e
-            else if (ch.equals("2")) {
-
-            }
+            else if (ch.equals("2")) { // 2.삭제
+                System.out.println("삭제할 번호를 입력하세요 : ");
+                int del = scanner.nextInt(); // 삭제할 번호 입력 받아서
+                String 전화번호부2 = ""; // 새로운 전화번호부 생성
+                for(int i = 0; i < 전화번호부.length(); i++){ // 삭제할 위치 찾기
+                    if(i !=del){ // i번째와 입력한 숫자와 같지 않다면
+                        전화번호부2+= 전화번호부;
+                        System.out.println(전화번호부);
+                    }// if e
+                } // f e
+            } // else e
         }// w e
     } //m e
 } // c e
