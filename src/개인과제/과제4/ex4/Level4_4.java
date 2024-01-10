@@ -12,15 +12,40 @@ public class Level4_4 {
 
 		String[] X_AXIS = new String[5];
 		int x = 0;
-		X_AXIS[ x ] = "★";
+		X_AXIS[ x ] = "★"; // [0] 인덱스
 
 		while ( true ) {
 			/* 문제풀이 위치 */
-
+			for(int i = 0; i <X_AXIS.length; i++ ){
+				System.out.print("\t"+X_AXIS[i]);
+			} // f e
+			System.out.println("\n");
+			System.out.println("1.전진 2.후진 선택 > ");
+			int ch = scanner.nextInt();
+			if(ch==1){
+				x++;
+				for (int i = 0; i <X_AXIS.length; i++){ // 0~4
+					if(x!=i){
+						X_AXIS[i] = null;
+					}else {
+						X_AXIS[i] = "★";
+					}
+				} // f e
+			}// if e
+			else if (ch==2) {
+				x--;
+				for (int i = 0; i <X_AXIS.length; i++){ // 0~4
+					if(x!=i){
+						X_AXIS[i] = null;
+					}else {
+						X_AXIS[i] = "★";
+					}
+				} // f e
+			} // else e
+		} // w e
 			/* ----------- */
-		}
-	}
-}
+	} // m e
+} // c e
 /* 
 	[문제]
 		1. String[] X_AXIS = new String[5]; : 문자열 배열 입니다.

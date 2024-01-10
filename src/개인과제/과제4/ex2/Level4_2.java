@@ -14,7 +14,13 @@ public class Level4_2 {
 
 		while ( true ) {
 			/* 문제풀이 위치 */
-
+			System.out.print("배열 길이 : ");
+			int num1 = scanner.nextInt(); // 배열크기
+			String [] a= new String[num1];
+			for(int i = 0; i<a.length; i++){
+			System.out.print("\t"+a[i]);
+			}// f e
+			System.out.println("\n");
 			/* ----------- */
 		}
 	}

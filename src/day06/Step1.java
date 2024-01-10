@@ -67,7 +67,7 @@ public class Step1 {
         String[] array2 = new String[2]; // 초기값 나중에 선언
         // 2. 배열의 항목/요소 호출
         System.out.println("array2 = " + array2);
-        System.out.println("array2[1] = " + array2[1]);
+        System.out.println(array2[1]);
         // 3. 수정
         array2[0] = "유재석";
 
