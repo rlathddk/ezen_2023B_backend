@@ -14,7 +14,12 @@ public class Level3_5 {
 		String authNumber = "";
 		
 		/* 문제풀이 위치 */
-		
+		Random random=new Random(); // 랜덤 함수 선언
+
+		for(int i = 1; i <=6; i++){
+			authNumber+= random.nextInt(10);
+		}
+			System.out.println(authNumber);
 		/* ----------- */
 
 	}
