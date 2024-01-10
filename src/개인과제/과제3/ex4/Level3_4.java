@@ -12,14 +12,21 @@ public class Level3_4 {
 	
 		/* 문제풀이 위치 */
 		String box = "";
+		int a = 0;
+
+
 		while (true){
+			if(a < 0) {
+				break;
+			}
 			System.out.print("input : ");
 			int num = scanner.nextInt();
-				for (int i = 0; i < num; i++) {
+			box = "";
+			a += num;
+				for (int i = 0; i < a; i++) {
 					box += "■ ";
 				}
 				System.out.println(box);
-
 		} // w e
 		/* ----------- */
 
