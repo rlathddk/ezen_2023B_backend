@@ -63,9 +63,10 @@ public class Step6 {
             else if (ch.equals("2")) { // 2.삭제
                 System.out.print("삭제하실 순번을 입력해주세요. : ");
                 int del = scanner.nextInt();
-                for(int i=0; i<numsp.length; i++){
-                    if(del-1!=i){
 
+                for(int i=0; i<numsp.length; i++){
+                    if(del-1==i){
+                        numsp[i] = null;
                     } // if e
                 } // f e
             }// else e
