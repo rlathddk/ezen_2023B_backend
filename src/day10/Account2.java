@@ -5,7 +5,7 @@ public class Account2 {
     // 필드
     String 계좌번호;
     String 계좌주;
-    int 입금액; // 입금액 ?? 명칭??
+    int 입금액; //
 
     // 생성자
     Account2(String 계좌번호, String 계좌주, int 입금액){

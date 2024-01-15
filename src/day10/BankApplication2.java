@@ -47,7 +47,7 @@ public class BankApplication2 {
             if(accounts[i]==null){break;}
             else if (accounts[i].계좌번호.equals(계좌번호)) {
                     accounts[i].입금액 += 예금액;
-            }ㄷ ㅠㅁㄱㄹㅇ  ㅎㅇ
+            }
         }
     } // 예금 e
     static void 출금(){
