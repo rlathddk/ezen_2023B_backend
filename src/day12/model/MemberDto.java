@@ -29,6 +29,13 @@ public class MemberDto {
         this.name = name;
         this.phone = phone;
     }
+
+        // 회원가입
+    public MemberDto(String id, String pw, String phone) {
+        this.id = id;
+        this.pw = pw;
+        this.phone = phone;
+    }
     // 3. 메소드
         // 1. setter , getter (필드가 private이면 필수)
     // 오른쪽 클릭 -> 생성 -> getter / setter -> 선택한 필드 만큼의 자동 생성
@@ -85,4 +92,6 @@ public class MemberDto {
     public int getNo(){
         return no;
     }
+
+
 }
