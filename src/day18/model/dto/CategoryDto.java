@@ -7,13 +7,13 @@ public class CategoryDto {
     private String cname;
 
     // 생성자
-
+    public CategoryDto(){}
     public CategoryDto(int cno, String cname) {
         this.cno = cno;
         this.cname = cname;
     }
 
-    // 메소드
+    // get/set
 
     public int getCno() {
         return cno;
@@ -31,6 +31,9 @@ public class CategoryDto {
         this.cname = cname;
     }
 
+
+    // tostring
+
     @Override
     public String toString() {
         return "CategoryDto{" +
@@ -38,4 +41,5 @@ public class CategoryDto {
                 ", cname='" + cname + '\'' +
                 '}';
     }
+
 }

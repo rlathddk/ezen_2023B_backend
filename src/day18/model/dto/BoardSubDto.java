@@ -1,27 +1,29 @@
 package day18.model.dto;
 
 public class BoardSubDto {
-
-    // 필드
+    private int bsubno;
     private int bno;
     private String bsubcontent;
     private int mno;
-    private int subdate;
-    private int bsubno;
 
-    // 생성자
-
-
-    public BoardSubDto(int bno, String bsubcontent, int mno, int subdate, int bsubno) {
+    //생성자
+    public BoardSubDto(){}
+    public BoardSubDto(int bsubno, int bno, String bsubcontent, int mno) {
+        this.bsubno = bsubno;
         this.bno = bno;
         this.bsubcontent = bsubcontent;
         this.mno = mno;
-        this.subdate = subdate;
-        this.bsubno = bsubno;
     }
 
-    // 메소드
+    //get/set
 
+    public int getBsubno() {
+        return bsubno;
+    }
+
+    public void setBsubno(int bsubno) {
+        this.bsubno = bsubno;
+    }
 
     public int getBno() {
         return bno;
@@ -47,30 +49,13 @@ public class BoardSubDto {
         this.mno = mno;
     }
 
-    public int getSubdate() {
-        return subdate;
-    }
-
-    public void setSubdate(int subdate) {
-        this.subdate = subdate;
-    }
-
-    public int getBsubno() {
-        return bsubno;
-    }
-
-    public void setBsubno(int bsubno) {
-        this.bsubno = bsubno;
-    }
-
     @Override
     public String toString() {
         return "BoardSubDto{" +
-                "bno=" + bno +
+                "bsubno=" + bsubno +
+                ", bno=" + bno +
                 ", bsubcontent='" + bsubcontent + '\'' +
                 ", mno=" + mno +
-                ", subdate=" + subdate +
-                ", bsubno=" + bsubno +
                 '}';
     }
 }

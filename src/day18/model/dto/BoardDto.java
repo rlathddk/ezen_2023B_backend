@@ -1,102 +1,94 @@
 package day18.model.dto;
 
 public class BoardDto {
-   // 필드
-    private int bno;
-    private int cno;
-    private String btitle;
-    private String bcontent;
-    private int bmo;
-    private int bdate;
-    private int bcount;
+        private int bno;
+        private int cno;
+        private String btitle;
+        private String bcontent;
+        private int mno;
+        private String bdate;
+        private int bcount;
 
-    //생성자
+        //생성자
+        public BoardDto(){}
+        public BoardDto(int bno, int cno, String btitle, String bcontent, int mno, String bdate, int bcount) {
+            this.bno = bno;
+            this.cno = cno;
+            this.btitle = btitle;
+            this.bcontent = bcontent;
+            this.mno = mno;
+            this.bdate = bdate;
+            this.bcount = bcount;
+        }
 
- public BoardDto(int bno, int cno, String btitle, String bcontent, int bmo, int bdate, int bcount) {
-  this.bno = bno;
-  this.cno = cno;
-  this.btitle = btitle;
-  this.bcontent = bcontent;
-  this.bmo = bmo;
-  this.bdate = bdate;
-  this.bcount = bcount;
- }
- // 글쓰기 생성자
+    //get/set
 
- public BoardDto(String btitle, String bcontent) {
-  this.btitle = btitle;
-  this.bcontent = bcontent;
- }
+        public int getBno() {
+            return bno;
+        }
 
+        public void setBno(int bno) {
+            this.bno = bno;
+        }
 
- // 메소드
+        public int getCno() {
+            return cno;
+        }
 
- public int getBno() {
-  return bno;
- }
+        public void setCno(int cno) {
+            this.cno = cno;
+        }
 
- public void setBno(int bno) {
-  this.bno = bno;
- }
+        public String getBtitle() {
+            return btitle;
+        }
 
- public int getCno() {
-  return cno;
- }
+        public void setBtitle(String btitle) {
+            this.btitle = btitle;
+        }
 
- public void setCno(int cno) {
-  this.cno = cno;
- }
+        public String getBcontent() {
+            return bcontent;
+        }
 
- public String getBtitle() {
-  return btitle;
- }
+        public void setBcontent(String bcontent) {
+            this.bcontent = bcontent;
+        }
 
- public void setBtitle(String btitle) {
-  this.btitle = btitle;
- }
+        public int getMno() {
+            return mno;
+        }
 
- public String getBcontent() {
-  return bcontent;
- }
+        public void setMno(int mno) {
+            this.mno = mno;
+        }
 
- public void setBcontent(String bcontent) {
-  this.bcontent = bcontent;
- }
+        public String getBdate() {
+            return bdate;
+        }
 
- public int getBmo() {
-  return bmo;
- }
+        public void setBdate(String bdate) {
+            this.bdate = bdate;
+        }
 
- public void setBmo(int bmo) {
-  this.bmo = bmo;
- }
+        public int getBcount() {
+            return bcount;
+        }
 
- public int getBdate() {
-  return bdate;
- }
+        public void setBcount(int bcount) {
+            this.bcount = bcount;
+        }
 
- public void setBdate(int bdate) {
-  this.bdate = bdate;
- }
-
- public int getBcount() {
-  return bcount;
- }
-
- public void setBcount(int bcount) {
-  this.bcount = bcount;
- }
-
- @Override
- public String toString() {
-  return "BoardDto{" +
-          "bno=" + bno +
-          ", cno=" + cno +
-          ", btitle='" + btitle + '\'' +
-          ", bcontent='" + bcontent + '\'' +
-          ", bmo=" + bmo +
-          ", bdate=" + bdate +
-          ", bcount=" + bcount +
-          '}';
- }
+        @Override
+        public String toString() {
+            return "BoardDto{" +
+                    "bno=" + bno +
+                    ", cno=" + cno +
+                    ", btitle='" + btitle + '\'' +
+                    ", bcontent='" + bcontent + '\'' +
+                    ", mno=" + mno +
+                    ", bdate='" + bdate + '\'' +
+                    ", bcount=" + bcount +
+                    '}';
+        }
 }

@@ -1,40 +1,50 @@
 package day18.view;
 
-import day18.controller.BoardController;
 import day18.controller.MemberController;
-import day18.model.dto.BoardDto;
-import day18.model.dto.MemberDto;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class BoardMainView {
     // 싱글톤
-    private BoardMainView(){};
+    private BoardMainView(){}
     private static BoardMainView BoardMainView = new BoardMainView();
-    public static BoardMainView getInstance(){return BoardMainView;}
-
-    // 입력객체
+    public static BoardMainView getInstance(){  return BoardMainView;}
+    //입력객체
     Scanner scanner = MainView.getInstance().scanner;
 
+    // 0.로그인 성공시 출력되는 화면.
+    public void run(){
+        while (true){
+            System.out.println("=========== ezen 게시판 ===========");
+            // 추후에 현재 게시물 출력 메소드 가 들어갈 자리
+            System.out.println("1.글쓰기 2.글보기 3.로그아웃");
 
-    public void 글쓰기(){
-        // 1. 입력받기
-        System.out.println("제목 :"); String 제목 = scanner.next();
-        System.out.println("내용 :"); String 내용 = scanner.next();
-        // 2. 객체화
-        BoardDto BoardDto = new BoardDto(제목, 내용);
+            try { // 만약에 tyr{ } 안에서 예외 가 발생하면 catch 이동
 
-        // 3. 컨트롤러에게 전달 후 결과
-        boolean result = BoardController.getInstance().글쓰기(BoardDto);
+                System.out.print("선택> "); int ch = scanner.nextInt();
 
-        // 4. 결과 출력
-        if(result){
-            System.out.println("글작성 완료");
-            // 게시판 화면으로 이동할 예정 <페이지 전환>
-//            BoardView.getInstance().run();
-        }else{
-            System.out.println("글작성 실패");
-        }
+                if( ch == 1 ){
+                    BoardView.getInstance().글쓰기();
+                }
+                else if( ch == 2 ){
 
-    } // 글쓰기e
-}// c e
+                }
+                else if( ch == 3 ){
+                    System.out.println("로그아웃 되었습니다.");
+                }
+                else {
+                    System.out.println("<안내> 알수 없는 기능 번호 입니다.");
+                }
+
+                //catch 다중이 가능하다.
+            }catch ( InputMismatchException e  ){ // input 타입 오류
+                System.out.println("<안내> 입력 할수 없는 형식 입니다." + e); // !!!! :
+                scanner = new Scanner(System.in); // 입력객체내 입력받은 필드/바이트 초기화
+
+            }catch ( Exception e ){ // 그외 : 테스트 하면서 오류 확인후 추후에 업데이트할 예정
+                System.out.println( e );
+            } // end
+        } // w end
+    } // m end
+} // c end
