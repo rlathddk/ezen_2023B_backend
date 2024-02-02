@@ -8,6 +8,5 @@ public class Step5 {
         // 1. 버튼 객체 생성
         Button button = new Button();
 
-        button.setClickListenr(new Button.)
     }
 }

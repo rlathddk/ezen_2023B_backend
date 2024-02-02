@@ -16,7 +16,7 @@ public class MemberDao extends Dao {
     // 1. 회원가입
     public int signup(MemberDto memberDto ){
         try {
-            // 1. SQL 작성 [ 변수가 들어갈 자리에는 ? 대체한다. ]
+            // 1. SQL 작성 [ 변수가 들어갈 자리에는 ? 대체한다. ] ( SQL을 통해 데이터베이스에서 원하는 정보를 추출하고, 데이터의 흐름이나 특정 조건에 따른 데이터 분석을 할 수 있기 때문)
             String sql = "insert into member( mid , mpw , mphone ) values( ? , ? , ? ) ";
             // 2. SQL 기재
             ps = conn.prepareStatement(sql);
@@ -29,6 +29,7 @@ public class MemberDao extends Dao {
             if (count == 1) {   return 0; } // 만약에 insert처리된 레코드가 1개이면 회원가입 성공
         }catch ( Exception e ){    System.out.println(e);    }
         // 5. 함수 종료
+
         return 1; // 실패
     } // m end
 

@@ -22,7 +22,7 @@ public class Dao {
     // DB 연동 관련 인터페이스 준비물
     protected Connection conn ;       // 1. DB연동객체 , PreparedStatement객체 생성 반환
     protected PreparedStatement ps ;  // 2. 작성된 SQL 가지고 있고, 매개변수 , SQL실행 담당.
-    protected ResultSet rs;           // 3. sql 실행 결과
+    protected ResultSet rs;           // 3. sql 실행 결과 //테이블에서 값을 가져옴
 
     protected Dao(){ // 생성자. : 객체 생성시 초기화 담당.
         // - 객체 생성시 db연동.
